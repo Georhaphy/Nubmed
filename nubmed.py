@@ -112,16 +112,16 @@ with col3b:
     year2 = st.text_input( "พ.ศ.", value= int(yr)+543, key='year22') 
 
 with col4b:
-    nudday = st.number_input("นัดเป็นวัน", format= "%0f", key='nudday')
+    nudday = st.number_input("นัดเป็นวัน", format= "%0f", step = 1,  key='nudday')
     
 with col5b:
-    nudwk = st.number_input("นัดเป็นสัปดาห์", format= "%0f", key='nudwk')
+    nudwk = st.number_input("นัดเป็นสัปดาห์", format= "%0f",step = 1, key='nudwk')
     
 with col6b:
-    nudmt = st.number_input("นัดเป็นเดือน", format= "%0f", key='nudmt')
+    nudmt = st.number_input("นัดเป็นเดือน", format= "%0f", step = 1,key='nudmt')
     
 with col7b:
-    nudyr = st.number_input("นัดเป็นปี", format= "%0f", key='nudyr')
+    nudyr = st.number_input("นัดเป็นปี", format= "%0f", step = 1, key='nudyr')
 
 
 
@@ -205,7 +205,7 @@ with col1c1:
     frea = st.write("นัดที่แล้ว")
 
 with col2c1:
-    nubmed = st.number_input("**", format= "%0f",key='nubmed',  label_visibility= "collapsed")
+    nubmed = st.number_input("**", format= "%0f",key='nubmed', label_visibility= "collapsed")
     
 with col3c1:
    frec = st.write("เม็ด/แคปซูล")  
