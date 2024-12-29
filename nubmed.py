@@ -112,16 +112,16 @@ with col3b:
     year2 = st.text_input( "พ.ศ.", value= int(yr)+543, key='year22') 
 
 with col4b:
-    nudday = st.number_input("นัดเป็นวัน", format= "%0f", step = 1,  key='nudday')
+    nudday = st.number_input("นัดเป็นวัน", format= "%0f",  key='nudday')
     
 with col5b:
-    nudwk = st.number_input("นัดเป็นสัปดาห์", format= "%0f",step = 1, key='nudwk')
+    nudwk = st.number_input("นัดเป็นสัปดาห์", format= "%0f", key='nudwk')
     
 with col6b:
-    nudmt = st.number_input("นัดเป็นเดือน", format= "%0f", step = 1,key='nudmt')
+    nudmt = st.number_input("นัดเป็นเดือน", format= "%0f",key='nudmt')
     
 with col7b:
-    nudyr = st.number_input("นัดเป็นปี", format= "%0f", step = 1, key='nudyr')
+    nudyr = st.number_input("นัดเป็นปี", format= "%0f", key='nudyr')
 
 
 
