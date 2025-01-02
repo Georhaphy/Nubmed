@@ -133,7 +133,7 @@ with col7b:
 
 
 
-col2b3, col2b4, col2b5, col2b6, col2b7 =st.columns([1,0.5,0.5,1,1]) 
+col2b3, col2b4, col2b5, col2b6, col2b7 =st.columns([0.5,0.5,1,1,1])   
 
 with col2b3:
        fre1b = st.write("กินยาวันละ") 
@@ -142,7 +142,7 @@ with col2b4:
        med2 = st.text_input("**", key='med2',value="1", label_visibility= "collapsed")
        
 with col2b5:
-      fre1c = st.write("ครั้ง")
+      fre1c = st.write("เม็ด/แคปซูล")
 
 with col2b6:
       today2 = st.checkbox("นับรวมวันนี้ด้วย", key='today2')
@@ -160,13 +160,13 @@ if but22:
                second_date2 = first_date2+relativedelta(days = int(nudday), weeks =int(nudwk), months = int(nudmt), years= int(nudyr), weekday=wkday   )
                resecond_date2 = second_date2.strftime("%d/%m/%Y")
                interval2 = int((second_date2 - first_date2).days)+1
-               sum2 = st.code(f"ตรงกับวันที่ {resecond_date2} ควรจ่ายยา {interval2*int(med2)} เม็ด/แคปซูล") 
+               sum2 = st.code(f"ตรงกับวันที่ {resecond_date2} ควรจ่ายยา {convert_to_int(interval2*float(med2))} เม็ด/แคปซูล") 
            
            else:
               second_date2 = first_date2+relativedelta(days = int(nudday), weeks =int(nudwk), months = int(nudmt), years= int(nudyr)  )
               resecond_date2 = second_date2.strftime("%d/%m/%Y")
               interval2 = int((second_date2 - first_date2).days)+1
-              sum2 = st.code(f"ตรงกับวันที่ {resecond_date2} ควรจ่ายยา {interval2*int(med2)} เม็ด/แคปซูล")  
+              sum2 = st.code(f"ตรงกับวันที่ {resecond_date2} ควรจ่ายยา {convert_to_int(interval2*float(med2))} เม็ด/แคปซูล")  
     else:
         
         
@@ -174,13 +174,13 @@ if but22:
               second_date2 = first_date2+relativedelta(days = int(nudday), weeks =int(nudwk), months = int(nudmt), years= int(nudyr), weekday=wkday   )
               resecond_date2 = second_date2.strftime("%d/%m/%Y")
               interval2 = int((second_date2 - first_date2).days)
-              sum2 = st.code(f"ตรงกับวันที่ {resecond_date2} ควรจ่ายยา {interval2*int(med2)} เม็ด/แคปซูล") 
+              sum2 = st.code(f"ตรงกับวันที่ {resecond_date2} ควรจ่ายยา {convert_to_int(interval2*float(med2))} เม็ด/แคปซูล") 
           
           else:
              second_date2 = first_date2+relativedelta(days = int(nudday), weeks =int(nudwk), months = int(nudmt), years= int(nudyr)  )
              resecond_date2 = second_date2.strftime("%d/%m/%Y")
              interval2 = int((second_date2 - first_date2).days)
-             sum2 = st.code(f"ตรงกับวันที่ {resecond_date2} ควรจ่ายยา {interval2*int(med2)} เม็ด/แคปซูล")  
+             sum2 = st.code(f"ตรงกับวันที่ {resecond_date2} ควรจ่ายยา {convert_to_int(interval2*float(med2))} เม็ด/แคปซูล")  
     
             
 st.subheader("เช็คว่ากินยาครบหรือไม่",divider=True) 
@@ -225,7 +225,7 @@ with col5c1:
     med3 =  st.text_input("**", key='med3',value="1", label_visibility= "collapsed")
     
 with col6c1:
-    fred = st.write("ครั้ง") 
+    fred = st.write("เม็ด/แคปซูล") 
  
 with col7c1:
     today3 = st.checkbox("นับรวมวันนี้ด้วย", key='today3')
@@ -238,10 +238,10 @@ if but3:
         second_date3 = datetime.strptime(f'{date4}/{listofmonth.index(month4)+1}/{int(year4)-543}', "%d/%m/%Y")
         if today3:
             interval3 = int((second_date3 - first_date3).days)+1
-            sum3 = st.code(f"{ int(nubmed) - (interval3*int(med3)) } เม็ด/แคปซูล") 
+            sum3 = st.code(f"{ float(nubmed) - (interval3*float(med3)) } เม็ด/แคปซูล") 
         else:
             interval3 = int((second_date3 - first_date3).days)
-            sum3 = st.code(f"ควรเหลือยา {int(nubmed) - (interval3*int(med3))} เม็ด/แคปซูล") 
+            sum3 = st.code(f"ควรเหลือยา { float(nubmed) - (interval3*float(med3))} เม็ด/แคปซูล") 
 
     
 
