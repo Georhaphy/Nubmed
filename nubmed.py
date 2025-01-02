@@ -215,7 +215,7 @@ with col5c:
 with col6c:
     year4 = st.text_input( "พ.ศ.", value= int(yr)+543, key='year4')   
     
-col1c1, col2c1, col3c1, col4c1, col5c1, col6c1, col7c1, col8c1 = st.columns([0.6,0.6,1,0.7,0.5,0.5,1.5,1])
+col1c1, col2c1, col3c1, col4c1, col5c1, col6c1, col7c1, col8c1 = st.columns([0.6,0.6,1,0.7,0.5,0.5,1.3,1])
 
 with col1c1:
     frea = st.write("นัดที่แล้ว")
