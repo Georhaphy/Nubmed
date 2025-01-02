@@ -41,7 +41,7 @@ interval3 = 0
 
 
 def convert_to_int(a) :
-    if int(a) == a:
+    if int(a) == float(a):
         return int(a)
     else:
         return a
@@ -98,10 +98,10 @@ if but1:
     second_date1 = datetime.strptime(f'{date2}/{listofmonth.index(month2)+1}/{int(year2)-543}', "%d/%m/%Y")
     if today1:
         interval1 = int((second_date1 - first_date1).days)+1
-        sum1 = st.code(f"ควรจ่ายยา {interval1*float(med1)} เม็ด/แคปซูล") 
+        sum1 = st.code(f"ควรจ่ายยา {convert_to_int(interval1*float(med1))} เม็ด/แคปซูล") 
     else:
         interval1 = int((second_date1 - first_date1).days)
-        sum1 = st.code(f"ควรจ่ายยา {interval1*float(med1)} เม็ด/แคปซูล") 
+        sum1 = st.code(f"ควรจ่ายยา {convert_to_int(interval1*float(med1))} เม็ด/แคปซูล") 
     
 
 
