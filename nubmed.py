@@ -77,7 +77,7 @@ with col5:
 with col6:
     year2 = st.text_input( "พ.ศ.", value= int(yr)+543, key='year2')   
 
-col12, col22, col32, col42, col52  = st.columns([1,0.5,0.5,1,1])  
+col12, col22, col32, col42, col52  = st.columns([0.5,0.5,1,1,1])  
 
 with col12:
     fre1 = st.write("กินยาวันละ")
