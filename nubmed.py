@@ -46,6 +46,14 @@ def convert_to_int(a) :
         return int(a)
     else:
         return math.ceil(a)
+    
+def check_int(a) :
+    if int(a) == float(a):
+        return int(a)
+    else:
+        return a 
+    
+    
 
 listofdate=["01", "02", "03", "04", "05", "06", "07", "08", "09","10", "11", "12","13", "14", "15",
  "16", "17", "18", "19", "20", "21", "22", "23", "24","25", "26", "27","28", "29", "30", "31"]
@@ -238,10 +246,10 @@ if but3:
         second_date3 = datetime.strptime(f'{date4}/{listofmonth.index(month4)+1}/{int(year4)-543}', "%d/%m/%Y")
         if today3:
             interval3 = int((second_date3 - first_date3).days)+1
-            sum3 = st.code(f"{ float(nubmed) - (interval3*float(med3)) } เม็ด/แคปซูล") 
+            sum3 = st.code(f"{check_int( float(nubmed) - (interval3*float(med3)))} เม็ด/แคปซูล") 
         else:
             interval3 = int((second_date3 - first_date3).days)
-            sum3 = st.code(f"ควรเหลือยา { float(nubmed) - (interval3*float(med3))} เม็ด/แคปซูล") 
+            sum3 = st.code(f"ควรเหลือยา {check_int( float(nubmed) - (interval3*float(med3)))} เม็ด/แคปซูล") 
 
     
 
