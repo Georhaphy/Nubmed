@@ -6,6 +6,7 @@ Created on Sat Dec 28 19:07:52 2024
 """
 
 import streamlit as st 
+import math
 from datetime import  date, datetime
 from dateutil.relativedelta import relativedelta
 
@@ -44,7 +45,7 @@ def convert_to_int(a) :
     if int(a) == float(a):
         return int(a)
     else:
-        return a
+        return math.ceil(a)
 
 listofdate=["01", "02", "03", "04", "05", "06", "07", "08", "09","10", "11", "12","13", "14", "15",
  "16", "17", "18", "19", "20", "21", "22", "23", "24","25", "26", "27","28", "29", "30", "31"]
