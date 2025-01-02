@@ -39,6 +39,13 @@ interval1 = 0
 interval2 = 0 
 interval3 = 0 
 
+
+def convert_to_int(a) :
+    if int(a) == a:
+        return int(a)
+    else:
+        return a
+
 listofdate=["01", "02", "03", "04", "05", "06", "07", "08", "09","10", "11", "12","13", "14", "15",
  "16", "17", "18", "19", "20", "21", "22", "23", "24","25", "26", "27","28", "29", "30", "31"]
 listofmonth = ["มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน",
@@ -78,7 +85,7 @@ with col22:
     med1 = st.text_input("**", key='med1',value="1", label_visibility= "collapsed")
 
 with col32:
-    fre11 = st.write("ครั้ง")
+    fre11 = st.write("เม็ด/แคปซูล")
     
 with col42:
     today1 = st.checkbox("นับรวมวันนี้ด้วย", key='today1')
@@ -91,10 +98,10 @@ if but1:
     second_date1 = datetime.strptime(f'{date2}/{listofmonth.index(month2)+1}/{int(year2)-543}', "%d/%m/%Y")
     if today1:
         interval1 = int((second_date1 - first_date1).days)+1
-        sum1 = st.code(f"ควรจ่ายยา {interval1*int(med1)} เม็ด/แคปซูล") 
+        sum1 = st.code(f"ควรจ่ายยา {interval1*float(med1)} เม็ด/แคปซูล") 
     else:
         interval1 = int((second_date1 - first_date1).days)
-        sum1 = st.code(f"ควรจ่ายยา {interval1*int(med1)} เม็ด/แคปซูล") 
+        sum1 = st.code(f"ควรจ่ายยา {interval1*float(med1)} เม็ด/แคปซูล") 
     
 
 
