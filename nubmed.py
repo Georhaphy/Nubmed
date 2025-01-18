@@ -26,6 +26,7 @@ st.markdown(background_image, unsafe_allow_html=True)
 
 
 st.markdown("<h1 style='text-align: center; color: black ; font-size: 40px ;'>Sakhon Nubmed</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: black ; font-size: 30px ;'><em>App นับเม็ด</em></h1>", unsafe_allow_html=True)
 st.markdown("<h1 style='text-align: center; color: black ; font-size: 19px ;'><em>Good precise Good using</em></h1>", unsafe_allow_html=True)
 
 
@@ -125,7 +126,7 @@ if but12:
         interval1 = int((second_date1 - first_date1).days)
         sum1 = st.code(f"ควรจ่ายยา {convert_to_int(interval1*(float(med12)/7))} เม็ด/แคปซูล") 
 
-st.subheader("นัดไม่เจาะจงวัน",divider=True) 
+st.subheader("นัดแบบไม่เจาะจงวัน",divider=True) 
     
 col1b, col2b, col3b, col4b, col5b, col6b, col7b  = st.columns([1,2,1,1,1.2,1,1])
 
